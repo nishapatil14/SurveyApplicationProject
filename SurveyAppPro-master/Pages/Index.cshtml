@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{ ViewData["Title"] = "Home page"; }
+
+
+
+    <table>
+   
+
+        <tr>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text='<%#Eval("id") %>'></asp:Label>
+                <asp:HiddenField ID="HiddenField1" runat="server" Value='<%#Eval("ctrl") %>' />
+            </td>
+            <td>
+                <asp:Label ID="Label2" runat="server" Text='<%#Eval("title") %>'></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+            </td>
+            <td>
+                <asp:RadioButton ID="RadioButton1" runat="server" Checked="true" Text="YES" TextAlign="Left" Visible="false" />
+                <asp:RadioButton ID="RadioButton2" runat="server" Text="NO" TextAlign="Left" Visible="false" />
+            </td>
+            <td>
+                <asp:CheckBox ID="CheckBox1" runat="server" Visible="false" />
+            </td>
+        </tr>
+   
+        </table>
+    <a asp-page="CompleteSurvey">Complete the survey</a>
+    
